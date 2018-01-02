@@ -138,7 +138,7 @@ namespace socklib {
      * @param offset, len : le début et la longueur des données à envoyer. Si len est -1 toutes les
      * données sont envoyée.
      */
-    void write(std::vector<char> data, int offset=0, int len=-1);
+    void write(const std::vector<char> &data, int offset=0, int len=-1);
 
     /**
      * @brief Envoie/Écrit des données sur le flux
@@ -146,7 +146,7 @@ namespace socklib {
      * @param offset, len : le début et la longueur des données à envoyer. Si len est -1 toutes les
      * données sont envoyée.
      */
-    void write(std::string data, int offset=0, int len=-1);
+    void write(const std::string &data, int offset=0, int len=-1);
 
     /**
      * @brief copie le contenu d'un fichier ou d'une socket dans un autre jusqu'à la fermeture du premier

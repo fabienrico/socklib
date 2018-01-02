@@ -186,7 +186,7 @@ socklib::BufferedReaderWriter::test_read() {
 }
 
 void
-socklib::BufferedReaderWriter::write(std::vector<char> data,
+socklib::BufferedReaderWriter::write(const std::vector<char> &data,
 				     int offset, int len) {
   int env = len;
   if (len == -1) {
@@ -196,7 +196,7 @@ socklib::BufferedReaderWriter::write(std::vector<char> data,
 }
 
 void
-socklib::BufferedReaderWriter::write(std::string data,
+socklib::BufferedReaderWriter::write(const std::string &data,
 				     int offset, int len) {
   int env = len;
   if (len == -1) {
