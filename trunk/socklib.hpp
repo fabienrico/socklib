@@ -2,6 +2,17 @@
 #include <cerrno>
 #include <string>
 
+/**
+ * @file socklib.hpp
+ * @brief fichier contenant les fonctions de créations de socket et les fonctions de gestion d'erreur
+ */
+
+
+/**
+ * @namespace socklib
+ * @brief espace de nom général
+ **/
+
 namespace socklib {
   class ReaderWriter;
   class BufferedReaderWriter;
@@ -20,11 +31,41 @@ namespace socklib {
 	   bool cond, int errnum, bool exception);
   
   /**
-     @brief teste errnum et envoie une exception si errnum est un code d'erreur différent de 0
+     @brief fonction de test et de génération d'erreur
+     @param msg : message à afficher
+     @param cond : condition d'erreur
+     @param errnum : numéro de l'erreur système ou 0 s'il n'y en a pas.
+
+     Cette fonction affiche le texte d'erreur `msg` sur la sortie d'erreur
+     et lance une exception.
+     Si un code d'erreur `errnum` différent de 0 est fourni, l'exception
+     générée est une erreur système (std::system_error) dont `errnum` est
+     le code d'erreur.
+     Sinon, l'exception est une std::runtime_error dont `msg` est le message.
+
+     Par exemple le code suivant ouvre un FD en écriture en créant le
+     fichier `toto.txt` et teste sa création et génère une exception
+     système en cas d'erreur
+     @code{.cpp}
+     fdout = open("toto.txt", O_CREAT|O_WRONLY, S_IRUSR|S_IWUSR);
+     exit_error("Création du fichier", fdout==-1, errno);
+     @endcode
   */
 #define exit_error(msg, cond, errnum) socklib::__error_(__FILE__, __LINE__, (msg), cond, errnum, true)
   /**
-     @brief teste errnum et affiche une erreur si errnum est un code d'erreur différent de 0
+     @brief fonction de test provoquant un warning
+     @param msg : message à afficher
+     @param cond : condition d'erreur
+     @param errnum : numéro de l'erreur système ou 0 s'il n'y en a pas.
+
+     teste la condition cond et affiche un warning.
+
+     Cette fonction affiche le texte d'erreur `msg` sur la sortie d'erreur.
+     Si un code d'erreur `errnum` différent de 0 est fourni, l'exception
+     générée est une erreur système (std::system_error) dont `errnum` est
+     le code d'erreur.
+     Sinon, l'execption est une std::runtime_error dont `msg` est le message.
+
   */
 #define warning_error(msg, cond, errnum) socklib::__error_(__FILE__, __LINE__, (msg), cond, errnum, false)
 
@@ -48,7 +89,7 @@ namespace socklib {
    * @throws une system_error s'il y a un souci à la création ou une runtime_error
    * si le serveur ne peut pas être contacté
    */
-  int CreeSocketClient(const std::string &serveur, const std::string &port);
+  int CreeSocketClient(const std::string &server, const std::string &port);
 
   
   /**

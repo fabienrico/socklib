@@ -8,6 +8,40 @@ socklib::BufferedReaderWriter::BufferedReaderWriter(int fd) :
   rw(fd), deb(0), fin(0), buf(TAILLE_BUFF), valid(true) {
 }
 
+socklib::BufferedReaderWriter::BufferedReaderWriter(BufferedReaderWriter &&brw) :
+  rw(brw.rw), deb(brw.deb), fin(brw.fin), buf(brw.buf), valid(brw.valid)
+{
+  brw.valid = false;
+}
+
+void std::swap(socklib::BufferedReaderWriter &a, socklib::BufferedReaderWriter &b){
+  int temp;
+  bool tempb;
+  std::swap(a.rw, b.rw);
+
+  temp = a.deb;
+  a.deb = b.deb;
+  b.deb = temp;
+
+  temp = a.fin;
+  a.fin = b.fin;
+  b.fin = temp;
+
+  tempb = a.valid;
+  a.valid = b.valid;
+  b.valid = tempb;
+
+  std::swap(a.buf, b.buf);
+}
+
+socklib::BufferedReaderWriter &
+socklib::BufferedReaderWriter::operator=(socklib::BufferedReaderWriter &&brw) {
+  
+  std::swap(*this, brw);
+  
+  return *this;
+}
+
 socklib::BufferedReaderWriter::~BufferedReaderWriter() {
   if  (this->valid) {
     this->close();

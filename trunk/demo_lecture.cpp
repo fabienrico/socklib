@@ -1,3 +1,9 @@
+/**
+ * @file
+ * @brief Fichier de démonstration utilisé en cours
+ * @author Fabien Rico <fabien.rico@univ-lyon1.fr>
+ **/
+
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -31,8 +37,6 @@ void usage(const std::string &nomprog) {
 	    << " [-p port] [-w <temps attente en seconde>] (-s|-l|-t <taille>|-a <taille>) (<nom fichier>|PRINT)"
 	    << std::endl;
 }
-
-
 
 int main(int argc, char *argv[]) {
   int fdout;
@@ -140,14 +144,14 @@ int main(int argc, char *argv[]) {
 
   std::cerr << "port d'écoute : " << port << std::endl;
 
-  // on cree une socket d'attente
+  // on crée une socket d'attente
   int sock_attente = socklib::CreeSocketServeur(port);
 
   // on recoit un nouveau client
   int sock = socklib::AcceptConnexion(sock_attente);
   socklib::BufferedReaderWriter in(sock);
 
-  // l'a socket d'attente est maintenant inutile
+  // la socket d'attente est maintenant inutile
   close(sock_attente);
 
   

@@ -10,8 +10,13 @@
 #include <string>
 
 void
-socklib::__error_(const char *file, const int ligne, const std::string &msg, bool cond, int errnum, bool exception) {
-    
+socklib::__error_(const char *file,
+		  const int ligne,
+		  const std::string &msg,
+		  bool cond,
+		  int errnum,
+		  bool exception) {
+  
   if (cond) {
     // il y a bien une erreur
     std::ostringstream c;
@@ -22,7 +27,7 @@ socklib::__error_(const char *file, const int ligne, const std::string &msg, boo
     }
     c << " fichier " << file << " ligne " <<  ligne << " : ";
     if (errnum != 0) {
-      std::system_error err = std::system_error(errno, std::system_category(), msg);
+      std::system_error err = std::system_error(errnum, std::system_category(), msg);
       c << err.what() << std::endl;
       std::cerr << c.str();
       if (exception) {

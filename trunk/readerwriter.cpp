@@ -5,9 +5,14 @@
 #include <fcntl.h>
 
 
+/**
+ * @namespace codeC
+ * @brief espace de nom interne pour éviter une ambiguité
+ *
+ * Ce namespace sert à eviter la confusion entre
+ * la méthode socklib::ReaderWriter::close() et la fonction close la libc
+ */
 namespace codeC {
-  // je suis obligé de metre un namespace pour eviter la confusion entre
-  // la méthode close() et la fonction close la libc
   #include <unistd.h>
 }
 #include "socklib.hpp"
@@ -19,6 +24,14 @@ void
 socklib::ReaderWriter::close() {
   int r = codeC::close(this->fd);
   exit_error("Erreur à la fermeture du file descriptor", r==-1, errno);
+}
+
+void
+std::swap(socklib::ReaderWriter &a, socklib::ReaderWriter &b) {
+  int temp;
+  temp = a.fd;
+  a.fd = b.fd;
+  b.fd = temp;
 }
 
 

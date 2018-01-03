@@ -1,3 +1,8 @@
+/**
+ * @file
+ * @brief Fichier avec les tests de fonctionnement de la librairie
+ * @author Fabien Rico <fabien.rico@univ-lyon1.fr>
+ **/
 #include "socklib.hpp"
 #include "bufferedreaderwriter.hpp"
 
@@ -10,6 +15,7 @@
 
 #include <system_error>
 #include <iostream>
+#include <iomanip>
 #include <vector>
 #include <iostream>
 #include <sstream>
@@ -709,11 +715,102 @@ bool test_socket_error() {
   } catch (std::runtime_error &e) {
     std::cerr << "Réussit !!" << std::endl;
   }
-
-  
-
   
   return true;
+}
+
+bool test_BRW_et_vector() {
+  int i;
+  std::string TEMPLATE("/tmp/testsocklib_test_");
+  std::vector<socklib::BufferedReaderWriter> tabBRW;
+  std::vector<std::string> tabNOM;
+  
+  std::cerr << "Essai d'utilisation des tableaux avec les BufferedReaderWriter"<< std::endl;
+  
+  for (i=0; i<8; i++) {
+    std::ostringstream c;
+    c << TEMPLATE << std::setfill ('0') << std::setw (3) << i;
+    tabNOM.push_back(c.str());
+
+    int fd = open(tabNOM[i].data(), O_CREAT|O_TRUNC|O_WRONLY, S_IRUSR|S_IWUSR);
+    exit_error(std::string("Création du fichier")+tabNOM[i], fd==-1, errno);
+    std::cerr << "création de " << tabNOM[i] << std::endl;
+
+    if (i % 2 == 0) {
+      tabBRW.push_back(socklib::BufferedReaderWriter(fd));
+    } else {
+      socklib::BufferedReaderWriter rw(fd);
+      tabBRW.push_back(std::move(rw));
+    }
+  }
+
+  for (i=0; i<8; i++) {
+    tabBRW[i].write(tabNOM[i]+"\n");
+  }
+
+  tabBRW.clear();
+
+  for (i=0; i<8; i++) {
+    int fd = open(tabNOM[i].data(), O_RDONLY);
+    exit_error(std::string("Ouverture du fichier")+tabNOM[i], fd==-1, errno);
+    std::cerr << "ouverture de " << tabNOM[i] << std::endl;
+    tabBRW.push_back(socklib::BufferedReaderWriter(fd));
+  }
+
+  for (i=0; i<8; i++) {
+    std::string ligne = tabBRW[i].read_line();
+    if (ligne != tabNOM[i]+"\n") {
+      std::cerr << "Problème '" << ligne << "' est différent de '"
+		<< tabNOM[i]+"\n" << "'";
+      return false;
+    }
+  }
+
+  tabBRW.clear();
+  
+  return true;
+}
+
+socklib::BufferedReaderWriter
+get_BRW_res(std::string nom, std::string port) {
+  // fonction pour tester le retour de fonction pour un BRW
+  socklib::BufferedReaderWriter result(socklib::CreeSocketClient(nom, port));
+  return result;
+}
+
+bool test_BRW_et_fonction() {
+  std::cerr << "Essaie de renvoyer un BufferedReaderWriter comme retour de fonction"<< std::endl;
+
+  std::string ligne;
+  socklib::BufferedReaderWriter web = get_BRW_res("www.google.fr", "80");
+  
+  web.write("GET /\t\n\t\n");
+  int nb = 0;
+  while((ligne = web.read_line()) != "") {
+    std::cerr << "Lu : " << ligne << std::endl;
+    nb ++;
+  }
+
+  if (nb < 1) {
+    std::cerr << nb << "ligne de réponses reçues" << std::endl;
+    return false;
+  }
+
+  web = get_BRW_res("www.univ-lyon1.fr", "80");
+  web.write("GET /\t\n\t\n");
+  nb = 0;
+  while((ligne = web.read_line()) != "") {
+    std::cerr << "Lu : " << ligne << std::endl;
+    nb ++;
+  }
+
+  if (nb < 1) {
+    std::cerr << nb << "ligne de réponses reçues" << std::endl;
+    return false;
+  }
+
+  return true;
+  
 }
 
 void test(bool (fct)()) {
@@ -722,7 +819,7 @@ void test(bool (fct)()) {
     if (fct()) {
       std::cerr << "\033[32;11m## Réussit ##########################\033[00m" << std::endl;    
     } else {
-      std::cerr << "\033[31;11mLoupé#############################\033[00m" << std::endl;
+      std::cerr << "\033[31;11m## Loupé#############################\033[00m" << std::endl;
       exit(1);
     }
   } catch (std::exception &e) {
@@ -732,6 +829,8 @@ void test(bool (fct)()) {
   } 
 
 }
+
+
 
 int main(int argc, char *argv[]) {
 
@@ -749,6 +848,8 @@ int main(int argc, char *argv[]) {
   test(test_brw_socket_test_read);
 
   test(test_copie_fichier);
-  
+
+  test(test_BRW_et_vector);
+  test(test_BRW_et_fonction);
   return 0;
 }

@@ -2,16 +2,26 @@
 #include <vector>
 
 namespace socklib {
-  /**
-     @brief classe de lecteur sur un file descriptor sans buffer.
-     
-     Cette classe est simplifiée plutot basée sur le fonctionnement des socker C. Elle est définie
-     pour proposer une lecture et une écriture même sur les fd qui ne permettent que l'un des deux
-     (fichier ouvert en lecture, pipe, ...). Dans le cas de l'appel à la fonction lecture ou ériture
-     alors que c'est impossible, cela génèrera des exceptions.
-     Cette classe n'est prévue que pour être utilisée dans le la classe de donnée bufferisées
-  */
+  class ReaderWriter;
+}
+
+namespace std {
+  void swap(socklib::ReaderWriter &a, socklib::ReaderWriter &b);
+}
   
+
+namespace socklib {
+  /**
+   *  @class ReaderWriter
+   *  @brief Classe interne de lecteur sur un descripteur de fichier sans buffer.
+   *  @see BufferedReaderWriter
+   *  
+   *  Cette classe n'est prévue que pour être utilisée dans le la classe de données bufferisées : BufferedReaderWriter
+   *  Cette classe est simplifiée plutot basée sur le fonctionnement des sockets C. Elle est définie
+   *  pour proposer une lecture et une écriture même sur les FDs qui ne permettent que l'un des deux
+   *  (fichier ouvert en lecture, pipe, ...). Dans le cas de l'appel à la fonction lecture ou ériture
+   *  alors que c'est impossible, cela génèrera des exceptions.
+   **/
   class ReaderWriter{
   private :
     int fd;
@@ -27,6 +37,12 @@ namespace socklib {
     */
     void close();
 
+    /**
+     * @brief échange de 2 `ReaderWriter`
+     * @param a,b : les deux `ReaderWriter` à échanger
+     */
+    friend void std::swap(ReaderWriter &a, ReaderWriter &b);
+    
     /**
      * @brief test s'il y a qqchose à lire en modifiant le comportement
      * pour le rendre non blocant.

@@ -16,9 +16,9 @@ LIBCPPO=$(LIBCPP:.cpp=.O)
 CC=gcc
 CPP=g++
 CFLAGS=-g -Wall
-CPPFLAGS=-g -Wall -std=c++11 -I.
+CPPFLAGS=-g -Wall -std=c++11 -I. -O0
 LDFLAGS=
-LDDFLAGS=
+LDDFLAGS= -lefence
 
 
 FICHIERS=$(CODEC) $(POINTH) $(CODECPP) $(POINTHPP) $(LIBCPP)
@@ -35,7 +35,6 @@ exec: $(EXE)
 
 %.O: %.cpp $(POINTHPP)
 	$(CPP) -c $(CPPFLAGS) $<  -o $@
-
 
 %.class: %.java
 	javac $<
@@ -67,6 +66,9 @@ tgz-date:: clean
 
 Doxyfile :
 	doxygen -g
+	perl -p -i -e "s/^PROJECT_NAME.*$$/PROJECT_NAME = SockLib/" Doxyfile
+	perl -p -i -e "s/^PROJECT_BRIEF.*$$/PROJECT_BRIEF = \"Librairie d'application pour le cours de système en L2 informatique à l'UCBL\"/" Doxyfile
+	perl -p -i -e "s/^USE_MDFILE_AS_MAINPAGE =.*$$/USE_MDFILE_AS_MAINPAGE = README.md/" Doxyfile
 	perl -p -i -e "s/^OUTPUT_DIRECTORY\s*=\s*$$/OUTPUT_DIRECTORY = Docs/" Doxyfile
 	perl -p -i -e "s/^BUILTIN_STL_SUPPORT\s*=\s*NO$$/BUILTIN_STL_SUPPORT = YES/" Doxyfile
 	perl -p -i -e "s/^EXTRACT_ALL\s*=\s*NO$$/EXTRACT_ALL = YES/" Doxyfile
