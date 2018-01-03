@@ -118,7 +118,8 @@ int main(int argc, char *argv[]) {
 	c << "!!!pas de mode de lecture choisi !!!";
 	std::cerr << c.str() << std::endl;
 	usage(argv[0]);
-	exit_error(c.str().c_str(), true, 0);
+	warning_error(c.str().c_str(), true, 0);
+	exit(1);
   }
 
   if (optind == argc) {
@@ -126,7 +127,8 @@ int main(int argc, char *argv[]) {
 	c << "!!! il manque le nom du fichier de sauvegarde !!!";
 	std::cerr << c.str() << std::endl;
 	usage(argv[0]);
-	exit_error(c.str().c_str(), true, 0);
+	warning_error(c.str().c_str(), true, 0);
+	exit(1);
   }
 
   nomfichier = argv[optind];

@@ -3,8 +3,8 @@
  * @brief Fichier avec les tests de fonctionnement de la librairie
  * @author Fabien Rico <fabien.rico@univ-lyon1.fr>
  **/
-#include "socklib.hpp"
-#include "bufferedreaderwriter.hpp"
+#include <socklib.hpp>
+#include <bufferedreaderwriter.hpp>
 
 #include <unistd.h>
 #include <sys/types.h>
@@ -600,12 +600,12 @@ bool test_copie_fichier() {
   
   std::cerr << "Test de la copie d'un fichier par la fonction recopie" << std::endl;
 
-  const char *inputname = "./test_socklib.cpp";
+  const char *inputname = "./README.md";
   // const char *inputname = "./toto.txt";
   char *outputname = tmpnam(NULL);
 
   int fdinput = open(inputname, O_RDONLY);
-  exit_error("Ouverture du fichier à lire", fdinput==-1, errno);
+  exit_error(std::string("Ouverture du fichier (doit être présent dans le répertoire courant) : ")+inputname, fdinput==-1, errno);
   int fdoutput = open(outputname, O_CREAT|O_EXCL|O_WRONLY, S_IRUSR|S_IWUSR);
   exit_error("Ouverture du fichier à écrire", fdoutput==-1, errno);
 
