@@ -1,0 +1,319 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>SockLib: Référence du fichier src/example/demo_lecture.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SockLib
+   </div>
+   <div id="projectbrief">Librairie d&#39;application pour le cours de système en L2 informatique à l&#39;UCBL</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="namespaces.html"><span>Espaces&#160;de&#160;nommage</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_1ff95392bc4e65547c61a42698fda530.html">example</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier demo_lecture.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Fichier de démonstration utilisé en cours.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;sys/types.h&gt;</code><br />
+<code>#include &lt;sys/stat.h&gt;</code><br />
+<code>#include &lt;fcntl.h&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &quot;<a class="el" href="socklib_8hpp_source.html">socklib.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="bufferedreaderwriter_8hpp_source.html">bufferedreaderwriter.hpp</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a4a525e86cdadef4e90305cdf0506a034"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="demo__lecture_8cpp.html#a4a525e86cdadef4e90305cdf0506a034">usage</a> (const std::string &amp;nomprog)</td></tr>
+<tr class="separator:a4a525e86cdadef4e90305cdf0506a034"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="demo__lecture_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
+<tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a536b1d9d140b184811fbe62d54f3b44e"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="demo__lecture_8cpp.html#a536b1d9d140b184811fbe62d54f3b44e">MODE_NONE</a> = 0</td></tr>
+<tr class="memdesc:a536b1d9d140b184811fbe62d54f3b44e"><td class="mdescLeft">&#160;</td><td class="mdescRight">les mode de lecture  <a href="#a536b1d9d140b184811fbe62d54f3b44e">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a536b1d9d140b184811fbe62d54f3b44e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a998673bb0bf83f589af109b1e211f0ba"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="demo__lecture_8cpp.html#a998673bb0bf83f589af109b1e211f0ba">MODE_FICHIER</a> = 1</td></tr>
+<tr class="separator:a998673bb0bf83f589af109b1e211f0ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a896189209962c92b5c8f6ce532cba06e"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="demo__lecture_8cpp.html#a896189209962c92b5c8f6ce532cba06e">MODE_LIGNE</a> = 2</td></tr>
+<tr class="separator:a896189209962c92b5c8f6ce532cba06e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96e88c053f07bfc6792dc287ecfeb369"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="demo__lecture_8cpp.html#a96e88c053f07bfc6792dc287ecfeb369">MODE_TAILLEFIXE</a> = 3</td></tr>
+<tr class="separator:a96e88c053f07bfc6792dc287ecfeb369"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad935af457fc7d3452436c797a8fc10c8"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="demo__lecture_8cpp.html#ad935af457fc7d3452436c797a8fc10c8">MODE_TAILLEFIXE_ATTENDUE</a> = 4</td></tr>
+<tr class="separator:ad935af457fc7d3452436c797a8fc10c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa989f18c0d1d5bab45513dc08f3fe66"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="demo__lecture_8cpp.html#aaa989f18c0d1d5bab45513dc08f3fe66">SORTIE_PRINT</a> = 0</td></tr>
+<tr class="separator:aaa989f18c0d1d5bab45513dc08f3fe66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51489a078474da7b29a1c37eafd738df"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="demo__lecture_8cpp.html#a51489a078474da7b29a1c37eafd738df">SORTIE_FICHIER</a> = 1</td></tr>
+<tr class="separator:a51489a078474da7b29a1c37eafd738df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5e1c16213bbee2d5e8cc363309f418c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="demo__lecture_8cpp.html#ad5e1c16213bbee2d5e8cc363309f418c">optind</a></td></tr>
+<tr class="separator:ad5e1c16213bbee2d5e8cc363309f418c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae30f05ee1e2e5652f174a35c7875d25e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="demo__lecture_8cpp.html#ae30f05ee1e2e5652f174a35c7875d25e">opterr</a></td></tr>
+<tr class="separator:ae30f05ee1e2e5652f174a35c7875d25e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a475b8db98445da73e5f62a1ef6324b95"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="demo__lecture_8cpp.html#a475b8db98445da73e5f62a1ef6324b95">optopt</a></td></tr>
+<tr class="separator:a475b8db98445da73e5f62a1ef6324b95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Fichier de démonstration utilisé en cours. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Fabien Rico <a href="#" onclick="location.href='mai'+'lto:'+'fab'+'ie'+'n.r'+'ic'+'o@u'+'ni'+'v-l'+'yo'+'n1.'+'fr'; return false;">fabie<span style="display: none;">.nosp@m.</span>n.ri<span style="display: none;">.nosp@m.</span>co@un<span style="display: none;">.nosp@m.</span>iv-l<span style="display: none;">.nosp@m.</span>yon1.<span style="display: none;">.nosp@m.</span>fr</a> </dd></dl>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a class="anchor" id="a0ddf1224851353fc92bfbff6f499fa97"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>argv</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4a525e86cdadef4e90305cdf0506a034"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void usage </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>nomprog</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des variables</h2>
+<a class="anchor" id="a998673bb0bf83f589af109b1e211f0ba"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int MODE_FICHIER = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a896189209962c92b5c8f6ce532cba06e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int MODE_LIGNE = 2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a536b1d9d140b184811fbe62d54f3b44e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int MODE_NONE = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>les mode de lecture </p>
+
+</div>
+</div>
+<a class="anchor" id="a96e88c053f07bfc6792dc287ecfeb369"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int MODE_TAILLEFIXE = 3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad935af457fc7d3452436c797a8fc10c8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int MODE_TAILLEFIXE_ATTENDUE = 4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae30f05ee1e2e5652f174a35c7875d25e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int opterr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad5e1c16213bbee2d5e8cc363309f418c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int optind</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a475b8db98445da73e5f62a1ef6324b95"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int optopt</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a51489a078474da7b29a1c37eafd738df"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int SORTIE_FICHIER = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aaa989f18c0d1d5bab45513dc08f3fe66"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int SORTIE_PRINT = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

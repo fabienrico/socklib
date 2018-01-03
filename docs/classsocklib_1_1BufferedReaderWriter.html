@@ -1,0 +1,930 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>SockLib: Référence de la classe socklib::BufferedReaderWriter</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SockLib
+   </div>
+   <div id="projectbrief">Librairie d&#39;application pour le cours de système en L2 informatique à l&#39;UCBL</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="namespaces.html"><span>Espaces&#160;de&#160;nommage</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Liste&#160;des&#160;classes</span></a></li>
+      <li><a href="classes.html"><span>Index&#160;des&#160;classes</span></a></li>
+      <li><a href="functions.html"><span>Membres&#160;de&#160;classe</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacesocklib.html">socklib</a></li><li class="navelem"><a class="el" href="classsocklib_1_1BufferedReaderWriter.html">BufferedReaderWriter</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Fonctions membres publiques</a> &#124;
+<a href="#pri-methods">Fonctions membres privées</a> &#124;
+<a href="#pri-attribs">Attributs privés</a> &#124;
+<a href="#pri-static-attribs">Attributs privés statiques</a> &#124;
+<a href="#friends">Amis</a> &#124;
+<a href="classsocklib_1_1BufferedReaderWriter-members.html">Liste de tous les membres</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence de la classe socklib::BufferedReaderWriter</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>classe de gestion des entrées sorties bufferisées  
+ <a href="classsocklib_1_1BufferedReaderWriter.html#details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="bufferedreaderwriter_8hpp_source.html">bufferedreaderwriter.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:a9a5b7e796bc96d8b48bf61765f1bfbf3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsocklib_1_1BufferedReaderWriter.html#a9a5b7e796bc96d8b48bf61765f1bfbf3">BufferedReaderWriter</a> (int fd)</td></tr>
+<tr class="memdesc:a9a5b7e796bc96d8b48bf61765f1bfbf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur à partir d'un descripteur de fichier.  <a href="#a9a5b7e796bc96d8b48bf61765f1bfbf3">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a9a5b7e796bc96d8b48bf61765f1bfbf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7febf5369843b9226237599268783c4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsocklib_1_1BufferedReaderWriter.html#aa7febf5369843b9226237599268783c4">~BufferedReaderWriter</a> ()</td></tr>
+<tr class="memdesc:aa7febf5369843b9226237599268783c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur il fermera automatiquement le FD.  <a href="#aa7febf5369843b9226237599268783c4">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aa7febf5369843b9226237599268783c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a237316ff2a8c8a1f9e1b24335fe164f0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsocklib_1_1BufferedReaderWriter.html#a237316ff2a8c8a1f9e1b24335fe164f0">BufferedReaderWriter</a> (const <a class="el" href="classsocklib_1_1BufferedReaderWriter.html">BufferedReaderWriter</a> &amp;brw)=delete</td></tr>
+<tr class="memdesc:a237316ff2a8c8a1f9e1b24335fe164f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le constructeur de copie par défaut est interdit.  <a href="#a237316ff2a8c8a1f9e1b24335fe164f0">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a237316ff2a8c8a1f9e1b24335fe164f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d182bc412fe143951142658be58b0fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsocklib_1_1BufferedReaderWriter.html">BufferedReaderWriter</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsocklib_1_1BufferedReaderWriter.html#a7d182bc412fe143951142658be58b0fb">operator=</a> (const <a class="el" href="classsocklib_1_1BufferedReaderWriter.html">BufferedReaderWriter</a> &amp;brw)=delete</td></tr>
+<tr class="memdesc:a7d182bc412fe143951142658be58b0fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">La copie de <code>BufferedReadrWriter</code> donc l'affectation est interdite.  <a href="#a7d182bc412fe143951142658be58b0fb">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a7d182bc412fe143951142658be58b0fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab6d6cb9af08fa76259e71c6291da2bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsocklib_1_1BufferedReaderWriter.html#aab6d6cb9af08fa76259e71c6291da2bc">BufferedReaderWriter</a> (<a class="el" href="classsocklib_1_1BufferedReaderWriter.html">BufferedReaderWriter</a> &amp;&amp;brw)</td></tr>
+<tr class="memdesc:aab6d6cb9af08fa76259e71c6291da2bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le constructeur de copie d'une valeur temporaire.  <a href="#aab6d6cb9af08fa76259e71c6291da2bc">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aab6d6cb9af08fa76259e71c6291da2bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c86b70bbc9d2ffe407ed553a64aa296"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsocklib_1_1BufferedReaderWriter.html">BufferedReaderWriter</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsocklib_1_1BufferedReaderWriter.html#a7c86b70bbc9d2ffe407ed553a64aa296">operator=</a> (<a class="el" href="classsocklib_1_1BufferedReaderWriter.html">BufferedReaderWriter</a> &amp;&amp;brw)</td></tr>
+<tr class="memdesc:a7c86b70bbc9d2ffe407ed553a64aa296"><td class="mdescLeft">&#160;</td><td class="mdescRight">L'affectation d'une valeur temporaire.  <a href="#a7c86b70bbc9d2ffe407ed553a64aa296">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a7c86b70bbc9d2ffe407ed553a64aa296"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad744764e4c9cd65e6f7b241bf723749b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsocklib_1_1BufferedReaderWriter.html#ad744764e4c9cd65e6f7b241bf723749b">close</a> ()</td></tr>
+<tr class="memdesc:ad744764e4c9cd65e6f7b241bf723749b"><td class="mdescLeft">&#160;</td><td class="mdescRight">fermeture du flux  <a href="#ad744764e4c9cd65e6f7b241bf723749b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad744764e4c9cd65e6f7b241bf723749b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a283c66b7ac8c819e05796a9640fb4992"><td class="memItemLeft" align="right" valign="top">std::vector&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsocklib_1_1BufferedReaderWriter.html#a283c66b7ac8c819e05796a9640fb4992">read</a> ()</td></tr>
+<tr class="memdesc:a283c66b7ac8c819e05796a9640fb4992"><td class="mdescLeft">&#160;</td><td class="mdescRight">récupération de donnée  <a href="#a283c66b7ac8c819e05796a9640fb4992">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a283c66b7ac8c819e05796a9640fb4992"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92ba8d07305b6827d3c95e0128205b8f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsocklib_1_1BufferedReaderWriter.html#a92ba8d07305b6827d3c95e0128205b8f">read_all</a> (int len)</td></tr>
+<tr class="memdesc:a92ba8d07305b6827d3c95e0128205b8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">récupération d'un nombre de données connu  <a href="#a92ba8d07305b6827d3c95e0128205b8f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a92ba8d07305b6827d3c95e0128205b8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab223ec388ad5960d64b8107b82c43969"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsocklib_1_1BufferedReaderWriter.html#ab223ec388ad5960d64b8107b82c43969">read_data</a> (char *buff, int offset, int len, bool wait=true)</td></tr>
+<tr class="memdesc:ab223ec388ad5960d64b8107b82c43969"><td class="mdescLeft">&#160;</td><td class="mdescRight">récupération dans un tableau de char  <a href="#ab223ec388ad5960d64b8107b82c43969">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab223ec388ad5960d64b8107b82c43969"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af91215467ede9c95bfcfeaeb116395d1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsocklib_1_1BufferedReaderWriter.html#af91215467ede9c95bfcfeaeb116395d1">read_until</a> (char end)</td></tr>
+<tr class="memdesc:af91215467ede9c95bfcfeaeb116395d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">récupération jusqu'à un fanion ou la fermeture  <a href="#af91215467ede9c95bfcfeaeb116395d1">Plus de détails...</a><br /></td></tr>
+<tr class="separator:af91215467ede9c95bfcfeaeb116395d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe9d832f95c1deaa25df9537e70f42e8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsocklib_1_1BufferedReaderWriter.html#afe9d832f95c1deaa25df9537e70f42e8">read_line</a> (char end= '\n')</td></tr>
+<tr class="memdesc:afe9d832f95c1deaa25df9537e70f42e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">récupération jusqu'à un fanion sous la forme de chaine de caractères  <a href="#afe9d832f95c1deaa25df9537e70f42e8">Plus de détails...</a><br /></td></tr>
+<tr class="separator:afe9d832f95c1deaa25df9537e70f42e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a9063c89cdc0b0533249c898685d2e0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsocklib_1_1BufferedReaderWriter.html#a8a9063c89cdc0b0533249c898685d2e0">test_read</a> ()</td></tr>
+<tr class="memdesc:a8a9063c89cdc0b0533249c898685d2e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">test s'il y a qqchose à lire  <a href="#a8a9063c89cdc0b0533249c898685d2e0">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a8a9063c89cdc0b0533249c898685d2e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a745c1aff62ff005963ad937456dd9deb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsocklib_1_1BufferedReaderWriter.html#a745c1aff62ff005963ad937456dd9deb">write</a> (const std::vector&lt; char &gt; &amp;data, int offset=0, int len=-1)</td></tr>
+<tr class="memdesc:a745c1aff62ff005963ad937456dd9deb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Envoie/Écrit des données sur le flux.  <a href="#a745c1aff62ff005963ad937456dd9deb">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a745c1aff62ff005963ad937456dd9deb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e70da50a82c7d590b51ca74d97df991"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsocklib_1_1BufferedReaderWriter.html#a5e70da50a82c7d590b51ca74d97df991">write</a> (const std::string &amp;data, int offset=0, int len=-1)</td></tr>
+<tr class="memdesc:a5e70da50a82c7d590b51ca74d97df991"><td class="mdescLeft">&#160;</td><td class="mdescRight">Envoie/Écrit des données sur le flux.  <a href="#a5e70da50a82c7d590b51ca74d97df991">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a5e70da50a82c7d590b51ca74d97df991"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b301ae8768d7db426c312bc20dcfaeb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsocklib_1_1BufferedReaderWriter.html#a6b301ae8768d7db426c312bc20dcfaeb">do_copy</a> (int dest)</td></tr>
+<tr class="memdesc:a6b301ae8768d7db426c312bc20dcfaeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">copie le contenu d'un fichier ou d'une socket dans une autre jusqu'à la fermeture du premier  <a href="#a6b301ae8768d7db426c312bc20dcfaeb">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a6b301ae8768d7db426c312bc20dcfaeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afacf33338c12f068e5d89e1cc90580b7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsocklib_1_1BufferedReaderWriter.html#afacf33338c12f068e5d89e1cc90580b7">do_copy</a> (<a class="el" href="classsocklib_1_1ReaderWriter.html">socklib::ReaderWriter</a> &amp;dest)</td></tr>
+<tr class="memdesc:afacf33338c12f068e5d89e1cc90580b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">copie le contenu d'un fichier ou d'une socket dans un autre jusqu'à la fermeture du premier  <a href="#afacf33338c12f068e5d89e1cc90580b7">Plus de détails...</a><br /></td></tr>
+<tr class="separator:afacf33338c12f068e5d89e1cc90580b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Fonctions membres privées</h2></td></tr>
+<tr class="memitem:a507bf05bda810e773ddf8f1d44a3aa58"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsocklib_1_1BufferedReaderWriter.html#a507bf05bda810e773ddf8f1d44a3aa58">_intern_complete_buffer</a> (int deja=0)</td></tr>
+<tr class="memdesc:a507bf05bda810e773ddf8f1d44a3aa58"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction <b>interne</b> de lecture du buffer  <a href="#a507bf05bda810e773ddf8f1d44a3aa58">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a507bf05bda810e773ddf8f1d44a3aa58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa171c22b10db66cb09319f547114e4bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsocklib_1_1BufferedReaderWriter.html#aa171c22b10db66cb09319f547114e4bd">_intern_retire_buffer</a> (int nboctet)</td></tr>
+<tr class="memdesc:aa171c22b10db66cb09319f547114e4bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction <b>interne</b> utilitaire de nettoyage du buffer  <a href="#aa171c22b10db66cb09319f547114e4bd">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aa171c22b10db66cb09319f547114e4bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Attributs privés</h2></td></tr>
+<tr class="memitem:a06389f41797be42915fa554defca3bec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsocklib_1_1ReaderWriter.html">ReaderWriter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsocklib_1_1BufferedReaderWriter.html#a06389f41797be42915fa554defca3bec">rw</a></td></tr>
+<tr class="memdesc:a06389f41797be42915fa554defca3bec"><td class="mdescLeft">&#160;</td><td class="mdescRight">l'outil de lecture interne  <a href="#a06389f41797be42915fa554defca3bec">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a06389f41797be42915fa554defca3bec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf912390b2f4da3d6112d654486ac516"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsocklib_1_1BufferedReaderWriter.html#aaf912390b2f4da3d6112d654486ac516">deb</a></td></tr>
+<tr class="separator:aaf912390b2f4da3d6112d654486ac516"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afea88d9087e73546312aa814df263e05"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsocklib_1_1BufferedReaderWriter.html#afea88d9087e73546312aa814df263e05">fin</a></td></tr>
+<tr class="memdesc:afea88d9087e73546312aa814df263e05"><td class="mdescLeft">&#160;</td><td class="mdescRight">fin de ce qui reste à lire  <a href="#afea88d9087e73546312aa814df263e05">Plus de détails...</a><br /></td></tr>
+<tr class="separator:afea88d9087e73546312aa814df263e05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab22bcede1e6aa10dbd5a20aba249a725"><td class="memItemLeft" align="right" valign="top">std::vector&lt; char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsocklib_1_1BufferedReaderWriter.html#ab22bcede1e6aa10dbd5a20aba249a725">buf</a></td></tr>
+<tr class="memdesc:ab22bcede1e6aa10dbd5a20aba249a725"><td class="mdescLeft">&#160;</td><td class="mdescRight">le buffer  <a href="#ab22bcede1e6aa10dbd5a20aba249a725">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab22bcede1e6aa10dbd5a20aba249a725"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a675c8aefcc0d73092a28ae8de9006e41"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsocklib_1_1BufferedReaderWriter.html#a675c8aefcc0d73092a28ae8de9006e41">valid</a></td></tr>
+<tr class="memdesc:a675c8aefcc0d73092a28ae8de9006e41"><td class="mdescLeft">&#160;</td><td class="mdescRight">le fd est-il valide  <a href="#a675c8aefcc0d73092a28ae8de9006e41">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a675c8aefcc0d73092a28ae8de9006e41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Attributs privés statiques</h2></td></tr>
+<tr class="memitem:a673e58a45a15f93e2774a72c4cd895eb"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsocklib_1_1BufferedReaderWriter.html#a673e58a45a15f93e2774a72c4cd895eb">TAILLE_BUFF</a> =500</td></tr>
+<tr class="memdesc:a673e58a45a15f93e2774a72c4cd895eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">la taille du buffer  <a href="#a673e58a45a15f93e2774a72c4cd895eb">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a673e58a45a15f93e2774a72c4cd895eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Amis</h2></td></tr>
+<tr class="memitem:a9e3a43b02720a7191cc9ca7bcd009e08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsocklib_1_1BufferedReaderWriter.html#a9e3a43b02720a7191cc9ca7bcd009e08">std::swap</a> (<a class="el" href="classsocklib_1_1BufferedReaderWriter.html">BufferedReaderWriter</a> &amp;a, <a class="el" href="classsocklib_1_1BufferedReaderWriter.html">BufferedReaderWriter</a> &amp;b)</td></tr>
+<tr class="memdesc:a9e3a43b02720a7191cc9ca7bcd009e08"><td class="mdescLeft">&#160;</td><td class="mdescRight">échange de 2 <code><a class="el" href="classsocklib_1_1BufferedReaderWriter.html" title="classe de gestion des entrées sorties bufferisées ">BufferedReaderWriter</a></code>  <a href="#a9e3a43b02720a7191cc9ca7bcd009e08">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a9e3a43b02720a7191cc9ca7bcd009e08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>classe de gestion des entrées sorties bufferisées </p>
+<p>C'est la classe principale qui gère les entrée sortie de haut niveau. Pour la lecture, elle utilise un buffer pour stocker les données afin de pouvoir gérer les lecture sur plusieurs octets comme :</p><ul>
+<li>lecture d'une ligne <a class="el" href="classsocklib_1_1BufferedReaderWriter.html#afe9d832f95c1deaa25df9537e70f42e8" title="récupération jusqu&#39;à un fanion sous la forme de chaine de caractères ">read_line()</a></li>
+<li>lecture de données jusqu'à un fanion <a class="el" href="classsocklib_1_1BufferedReaderWriter.html#af91215467ede9c95bfcfeaeb116395d1" title="récupération jusqu&#39;à un fanion ou la fermeture ">read_until()</a></li>
+</ul>
+<dl class="section warning"><dt>Avertissement</dt><dd>A cause du buffer, le descripteur de fichier (FD) associé à un objet est forcement lié à lui. Cela signifie, qu'il est impossible de copier un <code><a class="el" href="classsocklib_1_1BufferedReaderWriter.html" title="classe de gestion des entrées sorties bufferisées ">BufferedReaderWriter</a></code> et que sa destruction ferme le FD associé. </dd></dl>
+</div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a class="anchor" id="a9a5b7e796bc96d8b48bf61765f1bfbf3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">socklib::BufferedReaderWriter::BufferedReaderWriter </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructeur à partir d'un descripteur de fichier. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fd</td><td>: le <em>file descriptor</em> associé.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Ce constructeur initialise le buffer, il s'utilise à partir d'un FD existant.</p>
+<p>Par exemple ce constructeur s'utilise comme cela : </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> sock_client = <a class="code" href="namespacesocklib.html#a426a4d6e2fbcf559659e88607f0473f7">socklib::CreeSocketClient</a>(<span class="stringliteral">&quot;localhost&quot;</span>, <span class="stringliteral">&quot;23351&quot;</span>);</div><div class="line"><a class="code" href="classsocklib_1_1BufferedReaderWriter.html#a9a5b7e796bc96d8b48bf61765f1bfbf3">BufferedReaderWriter</a> <a class="code" href="classsocklib_1_1BufferedReaderWriter.html#a06389f41797be42915fa554defca3bec">rw</a>(sock_client);</div></div><!-- fragment --> 
+</div>
+</div>
+<a class="anchor" id="aa7febf5369843b9226237599268783c4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">socklib::BufferedReaderWriter::~BufferedReaderWriter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destructeur il fermera automatiquement le FD. </p>
+
+</div>
+</div>
+<a class="anchor" id="a237316ff2a8c8a1f9e1b24335fe164f0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">socklib::BufferedReaderWriter::BufferedReaderWriter </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classsocklib_1_1BufferedReaderWriter.html">BufferedReaderWriter</a> &amp;&#160;</td>
+          <td class="paramname"><em>brw</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Le constructeur de copie par défaut est interdit. </p>
+<p>Il est impossible de partager un descripteur de fichier dans plusieurs objet bufferisé. Pour empêcher cela, le constructeur de copie est interdit. L'appel à ce constructeur par erreur provoquera une erreur de compilation : <code>use of deleted function</code> </p>
+
+</div>
+</div>
+<a class="anchor" id="aab6d6cb9af08fa76259e71c6291da2bc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">socklib::BufferedReaderWriter::BufferedReaderWriter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsocklib_1_1BufferedReaderWriter.html">BufferedReaderWriter</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>brw</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Le constructeur de copie d'une valeur temporaire. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">brw</td><td>: l'origine de la copie </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions membres</h2>
+<a class="anchor" id="a507bf05bda810e773ddf8f1d44a3aa58"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool socklib::BufferedReaderWriter::_intern_complete_buffer </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>deja</em> = <code>0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>fonction <b>interne</b> de lecture du buffer </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deja</td><td>: à partir de quel caractère doit-t-on considérer la lecture. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>false si la socke test fermée</dd></dl>
+<p>cette fonction retourne imédiatement si le buffer contient déjà plus de d'octet que demandé. Sinon, il appelle la lecture sur le fd et tente de compléter le buffer. Dans ce cas elle peut être blocante. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa171c22b10db66cb09319f547114e4bd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void socklib::BufferedReaderWriter::_intern_retire_buffer </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nboctet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>fonction <b>interne</b> utilitaire de nettoyage du buffer </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nboctet</td><td>: le nombre d'octet à retirer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad744764e4c9cd65e6f7b241bf723749b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void socklib::BufferedReaderWriter::close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>fermeture du flux </p>
+
+</div>
+</div>
+<a class="anchor" id="a6b301ae8768d7db426c312bc20dcfaeb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int socklib::BufferedReaderWriter::do_copy </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dest</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>copie le contenu d'un fichier ou d'une socket dans une autre jusqu'à la fermeture du premier </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dest</td><td>: le fd où copier le contenu de l'objet appelant </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>le nombre d'octets écrit</dd></dl>
+<p>Cette fonction crée un <a class="el" href="classsocklib_1_1ReaderWriter.html" title="Classe interne de lecteur sur un descripteur de fichier sans buffer. ">ReaderWriter</a> temporaire pour faire le travail. </p>
+
+</div>
+</div>
+<a class="anchor" id="afacf33338c12f068e5d89e1cc90580b7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int socklib::BufferedReaderWriter::do_copy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsocklib_1_1ReaderWriter.html">socklib::ReaderWriter</a> &amp;&#160;</td>
+          <td class="paramname"><em>dest</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>copie le contenu d'un fichier ou d'une socket dans un autre jusqu'à la fermeture du premier </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dest</td><td>: le <a class="el" href="classsocklib_1_1ReaderWriter.html" title="Classe interne de lecteur sur un descripteur de fichier sans buffer. ">ReaderWriter</a> où copier le contenu de l'objet appelant </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>le nombre d'octets écrit </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7d182bc412fe143951142658be58b0fb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsocklib_1_1BufferedReaderWriter.html">BufferedReaderWriter</a>&amp; socklib::BufferedReaderWriter::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classsocklib_1_1BufferedReaderWriter.html">BufferedReaderWriter</a> &amp;&#160;</td>
+          <td class="paramname"><em>brw</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>La copie de <code>BufferedReadrWriter</code> donc l'affectation est interdite. </p>
+<p>Il est impossible de partager un descripteur de fichier dans plusieurs objet bufferisé. Pour empêcher cela, l'opérateur d'affectation est interdit. L'appel à ce constructeur par erreur provoquera une erreur de compilation : <code>use of deleted function</code> </p>
+
+</div>
+</div>
+<a class="anchor" id="a7c86b70bbc9d2ffe407ed553a64aa296"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsocklib_1_1BufferedReaderWriter.html">socklib::BufferedReaderWriter</a> &amp; socklib::BufferedReaderWriter::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsocklib_1_1BufferedReaderWriter.html">socklib::BufferedReaderWriter</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>brw</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>L'affectation d'une valeur temporaire. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">brw</td><td>: l'origine de la copie</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Cette fonction échange les 2 objets pour que la valeur écrasée par l'afectation soit détruite durant la destruction de l'objet affecté. </p>
+
+</div>
+</div>
+<a class="anchor" id="a283c66b7ac8c819e05796a9640fb4992"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; char &gt; socklib::BufferedReaderWriter::read </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>récupération de donnée </p>
+<dl class="section return"><dt>Renvoie</dt><dd>un vector avec les données lues</dd></dl>
+<p>Cette fonction retourne soit les données du buffer soit fait une requète sur le fd sous-jascent (ce qui peut être blocant). </p>
+
+</div>
+</div>
+<a class="anchor" id="a92ba8d07305b6827d3c95e0128205b8f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; char &gt; socklib::BufferedReaderWriter::read_all </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>récupération d'un nombre de données connu </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">len</td><td>: le nombre d'octets attendus dès qu'une partie des donnés st arrivée. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>le vector des données lues</dd></dl>
+<p>cette fonction fait toujours une lecture sur le fd interne. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab223ec388ad5960d64b8107b82c43969"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int socklib::BufferedReaderWriter::read_data </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>wait</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>récupération dans un tableau de char </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buff</td><td>: le tableau de données à remplir, il doit avoir une taille suffisante </td></tr>
+    <tr><td class="paramname">offset</td><td>: où commencer le remplissage </td></tr>
+    <tr><td class="paramname">len</td><td>: le nombre d'octets attendus </td></tr>
+    <tr><td class="paramname">wait</td><td>: doit-t-on attendre toutes les données ou s'arréter dès qu'une partie des données est arrivée. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>le nombre de données lues (0 si la socket est fermé ou le fichié est terminé).</dd></dl>
+<p>cette fonction fait toujours une lecture sur le fd interne. </p>
+
+</div>
+</div>
+<a class="anchor" id="afe9d832f95c1deaa25df9537e70f42e8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string socklib::BufferedReaderWriter::read_line </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>end</em> = <code>'\n'</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>récupération jusqu'à un fanion sous la forme de chaine de caractères </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">end</td><td>: le caractère attendu (il est concervé dans le tableau lu sauf si c'est '\0') </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>la chaine des données lues</dd></dl>
+<p>Cette fonction renvoie les données lues jusqu'au fanion. Le tableau renvoyé contien le fanion sauf si la fonction c'est terminée sur la fin du fd sous-jascent. Dans ce cas la fonction renvoie les données. Si le tableau rendu est de taille 0, c'est que le fd est fermé. </p>
+
+</div>
+</div>
+<a class="anchor" id="af91215467ede9c95bfcfeaeb116395d1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; char &gt; socklib::BufferedReaderWriter::read_until </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>end</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>récupération jusqu'à un fanion ou la fermeture </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">end</td><td>: le caractère attendu (il est concervé dans le tableau lu) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>le vector des données lues</dd></dl>
+<p>Cette fonction renvoie les données lues jusqu'au fanion. Le tableau renvoyé contien le fanion sauf si la fonction c'est terminée sur la fin du fd sous-jascent. Dans ce cas la fonction renvoie les données. Si le tableau rendu est de taille 0, c'est que le fd est fermé. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8a9063c89cdc0b0533249c898685d2e0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool socklib::BufferedReaderWriter::test_read </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>test s'il y a qqchose à lire </p>
+<dl class="section return"><dt>Renvoie</dt><dd>true s'il y a des octets à lire, false sinon </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a745c1aff62ff005963ad937456dd9deb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void socklib::BufferedReaderWriter::write </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; char &gt; &amp;&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Envoie/Écrit des données sur le flux. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>: les données </td></tr>
+    <tr><td class="paramname">offset,len</td><td>: le début et la longueur des données à envoyer. Si len est -1 toutes les données sont envoyée. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5e70da50a82c7d590b51ca74d97df991"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void socklib::BufferedReaderWriter::write </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Envoie/Écrit des données sur le flux. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>: les données sous forme de string </td></tr>
+    <tr><td class="paramname">offset,len</td><td>: le début et la longueur des données à envoyer. Si len est -1 toutes les données sont envoyée. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions amies et associées</h2>
+<a class="anchor" id="a9e3a43b02720a7191cc9ca7bcd009e08"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void std::swap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsocklib_1_1BufferedReaderWriter.html">BufferedReaderWriter</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsocklib_1_1BufferedReaderWriter.html">BufferedReaderWriter</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>échange de 2 <code><a class="el" href="classsocklib_1_1BufferedReaderWriter.html" title="classe de gestion des entrées sorties bufferisées ">BufferedReaderWriter</a></code> </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a,b</td><td>: les deux <code><a class="el" href="classsocklib_1_1BufferedReaderWriter.html" title="classe de gestion des entrées sorties bufferisées ">BufferedReaderWriter</a></code> à échanger </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des données membres</h2>
+<a class="anchor" id="ab22bcede1e6aa10dbd5a20aba249a725"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;char&gt; socklib::BufferedReaderWriter::buf</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>le buffer </p>
+
+</div>
+</div>
+<a class="anchor" id="aaf912390b2f4da3d6112d654486ac516"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int socklib::BufferedReaderWriter::deb</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>debut de ce qu'il reste à lire (si une lecture a déjà eu lieu sans vider le buffer et qu'on veut éviter de déplacer les données </p>
+
+</div>
+</div>
+<a class="anchor" id="afea88d9087e73546312aa814df263e05"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int socklib::BufferedReaderWriter::fin</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>fin de ce qui reste à lire </p>
+
+</div>
+</div>
+<a class="anchor" id="a06389f41797be42915fa554defca3bec"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsocklib_1_1ReaderWriter.html">ReaderWriter</a> socklib::BufferedReaderWriter::rw</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>l'outil de lecture interne </p>
+
+</div>
+</div>
+<a class="anchor" id="a673e58a45a15f93e2774a72c4cd895eb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int socklib::BufferedReaderWriter::TAILLE_BUFF =500</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>la taille du buffer </p>
+
+</div>
+</div>
+<a class="anchor" id="a675c8aefcc0d73092a28ae8de9006e41"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool socklib::BufferedReaderWriter::valid</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>le fd est-il valide </p>
+
+</div>
+</div>
+<hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
+<li>include/<a class="el" href="bufferedreaderwriter_8hpp_source.html">bufferedreaderwriter.hpp</a></li>
+<li>src/lib/<a class="el" href="bufferedreaderwriter_8cpp.html">bufferedreaderwriter.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

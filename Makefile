@@ -37,7 +37,9 @@ SRCBIN=$(shell ls $(REPSRCBIN)/*.cpp)
 EXECTEST=$(addprefix $(REPBIN)/,$(notdir $(SRCTEST:.cpp=.exx)))
 EXECBIN=$(addprefix $(REPBIN)/,$(notdir $(SRCBIN:.cpp=.exx)))
 
-FICHIERSGENERES=$(POLIB) $(FICHIERSLIB) $(EXECTEST) $(EXECBIN)
+REPSRC=$(REPSRCLIB) $(REPSRCBIN) $(REPSRCTEST)
+FICHIERSGENERES=$(POLIB) $(FICHIERSLIB) $(EXECTEST) $(EXECBIN) Doxyfile
+REPSGENERES=docs
 
 bin: $(EXECBIN)
 
@@ -103,3 +105,40 @@ clean:
                         rm $$i; \
                 fi; \
         done
+	@for i in $(REPSGENERES); \
+        do \
+                if [ -d $$i ]; then \
+                        echo "déplace "$$i" dans /tmp";\
+			NAM=`basename $$i;` \
+			TMPNAM=`mktemp -d "/tmp/"$$NAM".XXXXXX"`;\
+                        mv $$i $$TMPNAM;\
+                fi; \
+        done
+
+
+tgz:: clean
+	tar czvf ../$(REP).tar.gz -C ..  --exclude '*.swp' --exclude '*~' --exclude '.svn' --exclude 'docs' --exclude 'bin/*' --exclude 'lib/*' --exclude '.git'  $(REP)
+
+tgz-date:: clean
+	tar czvf ../$(REP)-`date +%y%m%d`.tar.gz -C ..  --exclude '*.swp' --exclude '*~' --exclude '.svn' --exclude 'docs' --exclude 'bin/*' --exclude 'lib/*' --exclude '.git'  $(REP)
+
+
+Doxyfile : Makefile
+	doxygen -g
+	perl -p -i -e "s/^PROJECT_NAME.*$$/PROJECT_NAME = SockLib/" Doxyfile
+	perl -p -i -e "s/^PROJECT_BRIEF.*$$/PROJECT_BRIEF = \"Librairie d'application pour le cours de système en L2 informatique à l'UCBL\"/" Doxyfile
+	perl -p -i -e "s/^USE_MDFILE_AS_MAINPAGE =.*$$/USE_MDFILE_AS_MAINPAGE = README.md/" Doxyfile
+	perl -p -i -e "s%^INPUT\s*=.*$$%INPUT = $(REPSRC) $(REPINCLUDE) README.md%" Doxyfile
+	perl -p -i -e "s/^OUTPUT_DIRECTORY\s*=\s*$$/OUTPUT_DIRECTORY = /" Doxyfile
+	perl -p -i -e "s/^GENERATE_HTML\s*=.*$$/GENERATE_HTML = YES/" Doxyfile
+	perl -p -i -e "s/^HTML_OUTPUT\s*=.*$$/HTML_OUTPUT = docs/" Doxyfile
+	perl -p -i -e "s/^GENERATE_LATEX\s*=.*$$/GENERATE_LATEX = NO/" Doxyfile
+	perl -p -i -e "s/^BUILTIN_STL_SUPPORT\s*=\s*NO$$/BUILTIN_STL_SUPPORT = YES/" Doxyfile
+	perl -p -i -e "s/^EXTRACT_ALL\s*=\s*NO$$/EXTRACT_ALL = YES/" Doxyfile
+	perl -p -i -e "s/^EXTRACT_PRIVATE\s*=\s*NO$$/EXTRACT_PRIVATE = YES/" Doxyfile
+	perl -p -i -e "s/^EXTRACT_STATIC\s*=\s*NO$$/EXTRACT_STATIC = YES/" Doxyfile
+	perl -p -i -e "s/^OUTPUT_LANGUAGE\s*=\s*English$$/OUTPUT_LANGUAGE = French/i" Doxyfile
+
+doc : Doxyfile $(FICHIERS)
+	doxygen
+
