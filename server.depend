@@ -1,0 +1,44 @@
+# depslib dependency file v1.0
+1515015799 source:/home/frico/Cours/LIF12-Systeme/2017-2018_printemps_ASR5/socklib/src/example/server.cpp
+	<iostream>
+	<socklib.hpp>
+
+1514910481 /home/frico/Cours/LIF12-Systeme/2017-2018_printemps_ASR5/socklib/include/socklib.hpp
+	<cerrno>
+	<string>
+
+1514970545 source:/home/frico/Cours/LIF12-Systeme/2017-2018_printemps_ASR5/socklib/src/lib/bufferedreaderwriter.cpp
+	<socklib.hpp>
+	<bufferedreaderwriter.hpp>
+	<sstream>
+	<cstring>
+	<algorithm>
+
+1514937399 /home/frico/Cours/LIF12-Systeme/2017-2018_printemps_ASR5/socklib/include/bufferedreaderwriter.hpp
+	"readerwriter.hpp"
+	"string"
+
+1514938280 /home/frico/Cours/LIF12-Systeme/2017-2018_printemps_ASR5/socklib/include/readerwriter.hpp
+	<vector>
+
+1514970530 source:/home/frico/Cours/LIF12-Systeme/2017-2018_printemps_ASR5/socklib/src/lib/readerwriter.cpp
+	<readerwriter.hpp>
+	<sstream>
+	<iostream>
+	<cerrno>
+	<fcntl.h>
+	<unistd.h>
+	"socklib.hpp"
+
+1514970517 source:/home/frico/Cours/LIF12-Systeme/2017-2018_printemps_ASR5/socklib/src/lib/socklib.cpp
+	<socklib.hpp>
+	<system_error>
+	<iostream>
+	<sstream>
+	<sys/types.h>
+	<sys/socket.h>
+	<netdb.h>
+	<cstring>
+	<unistd.h>
+	<string>
+

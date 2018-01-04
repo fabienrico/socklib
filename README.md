@@ -1,6 +1,6 @@
-######Documentation de la librairie SockLib######
+# Documentation de la librairie SockLib
 
-#####Description générale#####
+## Description générale
 
 Inspirée par l'équivalent en JAVA, la librairie contient 2 classes :
   - la classe socklib::ReaderWriter qui est une classe **interne** dont le but est de faire un habillage C++ aux fonctions de la librairie C. La pluspart du temps  *ce n'est pas celle que vous souhaitez utiliser*.
