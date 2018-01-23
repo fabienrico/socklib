@@ -242,7 +242,8 @@ socklib::BufferedReaderWriter::write(const std::string &data,
 int
 socklib::BufferedReaderWriter::do_copy(int fd) {
   socklib::ReaderWriter temp(fd);
-  return do_copy(temp);
+  int res = do_copy(temp);
+  return res;
 }
 int
 socklib::BufferedReaderWriter::do_copy(socklib::ReaderWriter &dest) {

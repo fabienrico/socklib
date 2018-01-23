@@ -216,7 +216,8 @@ namespace socklib {
      * @param dest : le fd où copier le contenu de l'objet appelant
      * @return le nombre d'octets écrit
      *
-     * Cette fonction crée un ReaderWriter temporaire pour faire le travail.
+     * Cette fonction crée un ReaderWriter temporaire pour faire le
+     * travail, mais elle ne ferme pas le FD qui lui a été transmis.
      */
     int do_copy(int dest);
     
