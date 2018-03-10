@@ -6,6 +6,8 @@ Inspirée par l'équivalent en JAVA, la librairie contient 2 classes :
   - la classe socklib::ReaderWriter qui est une classe **interne** dont le but est de faire un habillage C++ aux fonctions de la librairie C. La pluspart du temps  *ce n'est pas celle que vous souhaitez utiliser*.
   - la classe socklib::BufferedReaderWriter est une classe utilisant la première et un buffer pour crér des méthodes plus simples à manipuler.
 
+Vous pouvez voir la [documentation doxygen ici](http://perso.univ-lyon1.fr/fabien.rico/SockLib/)
+
 ## Mise en place du client ou du serveur
 
 Ces deux classes utilisent un descripteur de fichier *FD* qui peut être entre autre un fichier ou une socket connectée. Le `BufferedReaderWriter` est crée à partir d'un *FD* existant que l'on peut obtenir grâce aux fonctions habituelles de l'API C (`open()` pour les fichiers et `socket()` pour les sockets).  Cependant, pour simplifier l'utilisation des sockets, dans l'espace de nom socklib, il existe aussi les fonctions suivantes
