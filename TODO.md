@@ -8,6 +8,8 @@
 	- vérifier le fonctionnement de do_copy, bizarrement il utilise des RW
 	  non bufferisés et du code de lecture propre au lieu de la méthode
 	  générale
+	- ajouter un paramettre à la création de socket qui permet d'ouvrir
+	  des serveurs sur IPV6
 
 ### Fait
 
