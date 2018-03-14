@@ -1,6 +1,7 @@
 #pragma once
-#include "readerwriter.hpp"
-#include "string"
+#include <string>
+#include <socklib.hpp>
+#include <readerwriter.hpp>
 
 namespace std {
     /**
